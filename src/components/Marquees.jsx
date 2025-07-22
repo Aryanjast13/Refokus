@@ -1,9 +1,8 @@
-import React from 'react'
-import Marquee from './Marquee'
+import Marquee from "./Marquee"
+import { nanoid } from "nanoid"
 
 const Marquees = () => {
-
-     const imageUrls = [
+    const imageUrls = [
         [
             "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d36963b956910ca67534_remind.svg",
             "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275f0442508aceaec02_accel.svg",
@@ -15,6 +14,8 @@ const Marquees = () => {
             "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275f0442508aceaec02_accel.svg",
             "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275af18668cfbd759bc_webflow.svg",
             "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275e12177716cb3f2ea_basf.svg",
+        ],
+        [
             "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d27565c41bb608f7f7c0_rainfall.svg",
             "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275ff2309d9d743ec75_doxel.svg",
             "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275a4f001b08a4e28bc_weglot.svg",
@@ -29,10 +30,11 @@ const Marquees = () => {
         ],
         
     ]
+
   return (
-      <div className='mt-4'>{imageUrls.map((item) => (
-          <Marquee image_urls={item} />
-      ))}</div>
+    <section data-scroll-section className="w-full h-[50vh] mt-28">
+        {imageUrls.map((urls,index)=><Marquee key={nanoid()} direction={index===0?"left":"right"} urls={urls}/>)}
+    </section>
   )
 }
 

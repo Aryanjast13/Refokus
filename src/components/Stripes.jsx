@@ -12,7 +12,7 @@ const Stripes = () => {
   return (
     <div className=" grid  grid-cols-6 place-content-center mt-15 mb-15">
       {data.map((elm, index) => (
-        <Stripe val={elm} />
+        <Stripe key={index} val={elm} />
       ))}
     </div>
   );

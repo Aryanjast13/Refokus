@@ -12,14 +12,14 @@ const Footer = () => {
                   <div className='basis-1/4'>
                       <h4 className='mb-10 text-zinc-500 capitalize'>socials</h4>
                       {["instagram", "twitter (X)", "linkedin"].map((item) => (
-                          <a className='block mt-2 capitalize text-zinc-400' href="#">{ item}</a>
+                          <a className='block mt-2 capitalize text-zinc-400' key={item} href="#">{ item}</a>
 
                       ))}
                   </div>
                    <div className='basis-1/4'>
                       <h4 className='mb-10 text-zinc-500 capitalize'>sitemap</h4>
                       {["home", "work", "carres","Contact"].map((item) => (
-                          <a className='block mt-2 capitalize text-zinc-400' href="#">{ item}</a>
+                          <a className='block mt-2 capitalize text-zinc-400' key={item}  href="#">{ item}</a>
 
                       ))}
                   </div>
