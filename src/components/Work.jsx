@@ -9,7 +9,7 @@ const Work = () => {
         { url: "/five.webp",top:"52%",left:"46%",isActive:false}
     ]
   return (
-      <div className='w-full py-4'>
+      <div className='w-full py-4 mt-10'>
           <div className='relative max-w-screen-xl min-h-[50vh]  text-center mx-auto '>
               <h1 className='text-[34rem] leading-none tracking-tight font-normal'>work</h1>
               <div className='w-full absolute top-0 h-full'>
